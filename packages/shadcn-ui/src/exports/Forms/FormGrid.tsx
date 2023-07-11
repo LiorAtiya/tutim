@@ -17,7 +17,7 @@ export const FormGrid = ({ children, fieldsPerRow = FieldsPerRow.One }: GridProp
                      grid-cols-1
                      sm:grid-cols-${fieldsPerRow - 1}
                      md:grid-cols-${fieldsPerRow}
-                     gap-3 mt-0 mx-2 md:bg-white`}
+                     gap-3 mt-0 mx-2 md:mx-3`}
       >
         {children.map((child, index) => (
           <div key={index} className="w-full">

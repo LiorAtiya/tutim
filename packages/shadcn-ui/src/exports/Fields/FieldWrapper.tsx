@@ -17,7 +17,7 @@ export const Label: React.FC<LabelProps> = ({ label, tooltip }) => {
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button variant="outline" className="w-6 h-6 p-0 ml-1 rounded-full">
+              <Button variant="outline" className="w-4 h-4 p-0 ml-1 rounded-full">
                 <Info className="w-4 h-4" />
               </Button>
             </TooltipTrigger>
@@ -39,8 +39,8 @@ export const FieldWrapper: React.FC<{ fieldConfig: any; fieldState: any; childre
   const showError = !!error.message;
 
   return (
-    <div key={key} style={{ width: '100%' }}>
-      <div className='flex'>
+    <div key={key} className='w-full mt-3'>
+      <div className={`flex`}>
         <Label label={label} tooltip={tooltip} />
         {isRequired ? '*' : null}
       </div>

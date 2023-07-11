@@ -27,6 +27,36 @@ const config: FormConfig = {
       isRequired: true,
     },
     {
+      key: 'MultiCheckBoxField',
+      label: 'MultiCheckBoxField',
+      isDisabled: false,
+      type: 'multi-checkbox',
+      options: [
+        { value: 'one', label: 'One' },
+        { value: 'two', label: 'Two' },
+        { value: 'three', label: 'Three' },
+      ],
+      custom: { orientation: 'vertical' },
+    },
+    {
+      key: 'MultiSelectField',
+      label: 'MultiSelectField',
+      type: 'multi-select',
+      options: [
+        { value: '1', label: '1' },
+        { value: '2', label: '2', disabled: true },
+      ],
+    },
+    {
+      key: 'MultiTextField',
+      label: 'MultiTextField',
+      type: 'multi-text',
+      options: [
+        { value: '1', label: '1' },
+        { value: '2', label: '2', disabled: true },
+      ],
+    },
+    {
       key: 'agree',
       label: 'Agree to our terms and conditions - CheckBoxField',
       isDisabled: false,
@@ -183,6 +213,9 @@ const config: FormConfig = {
           'firstName',
           'lastName',
           'dataPicker',
+          'MultiCheckBoxField',
+          'MultiSelectField',
+          'MultiTextField',
           'agree',
           'settings',
           'hosting',
@@ -216,6 +249,12 @@ const config: FormConfig = {
           key: 'name',
           title: 'Three fields in row',
           fields: ['firstName', 'lastName', 'dataPicker'],
+          layout: { fieldsPerRow: FieldsPerRow.Three },
+        },
+        {
+          key: 'multi',
+          title: 'Three fields in row',
+          fields: ['MultiCheckBoxField', 'MultiSelectField', 'MultiTextField'],
           layout: { fieldsPerRow: FieldsPerRow.Three },
         },
         {

@@ -19,7 +19,6 @@ export const TextField: Field = ({ fieldConfig, inputProps: { value, onChange },
         key={key}
         required={isRequired}
         disabled={isDisabled}
-        className='mt-2 mb-1'
       />
 
     </FieldWrapper>
